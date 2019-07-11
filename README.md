@@ -6,5 +6,5 @@ Personal shell customization
 - powerline: https://github.com/powerline/powerline
 - powerline-fonts: https://github.com/powerline/fonts
 - powerline-gitstatus: https://github.com/jaspernbrouwer/powerline-gitstatus
-- powerlien-docker: https://github.com/adrianmo/powerline-docker
+- powerline-docker: https://github.com/adrianmo/powerline-docker
 - rbenv: https://github.com/rbenv/rbenv
