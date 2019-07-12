@@ -15,9 +15,9 @@ alias mystatus="mysql.server status"
 alias mystop="mysql.server stop"
 
 # Crisalix
-alias crun="/Users/mauri/Scripts/run_crisalix.sh"         # run
-alias cstatus="/Users/mauri/Scripts/status_crisalix.sh"   # status
-alias cstop="/Users/mauri/Scripts/stop_crisalix.sh"       # stop
+alias crun="$HOME/run-crisalix/run_crisalix.sh"         # run
+alias cstatus="$HOME/run-crisalix/status_crisalix.sh"   # status
+alias cstop="$HOME/run-crisalix/stop_crisalix.sh"       # stop
 
 # Show all alias related mysql
 myalias() { alias | grep 'mysql' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }

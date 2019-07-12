@@ -5,11 +5,12 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/mauri/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 echo "Hello Oriol!"
 
 plugins=(git)
-# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="awesome-patched"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -83,7 +84,7 @@ fi
 # echo "run mystop to stop MySQL Server"
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
-export DEFAULT_USER=mauri
+export DEFAULT_USER=$USER
 export POWERLINE_COMMAND=powerline
 export POWERLINE_CONFIG_COMMAND=powerline-config
 
