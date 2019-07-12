@@ -9,10 +9,10 @@ export ZSH=$HOME/.oh-my-zsh
 echo "Hello Oriol!"
 
 plugins=(git)
+# ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="awesome-patched"
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -73,22 +73,17 @@ plugins=(git docker)
 # Example aliases
 # alias zshconfig=“mate ~/.zshrc”
 # alias ohmyzsh=“mate ~/.oh-my-zsh”
-if [ -d "$HOME/Library/Python/2.7/bin" ]; then
-   export PATH="$PATH:$HOME/Library/Python/2.7/bin"
-fi
 
-# echo "MySQL Started!"
-# mystart
-# echo "MySQL Status"
-# mystatus
-# echo "run mystop to stop MySQL Server"
-[[ -s ~/.bashrc ]] && source ~/.bashrc
+# Evaluate rbenv
+eval "$(rbenv init -)"
 
-export DEFAULT_USER=$USER
+[[ -s ~/.bash_profile ]] && source ~/.bash_profile
+
+export DEFAULT_USER=oriolmauri
 export POWERLINE_COMMAND=powerline
 export POWERLINE_CONFIG_COMMAND=powerline-config
 
-source /Users/mauri/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+source $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # [[ -s “$HOME/.gvm/scripts/gvm” ]] && source “$HOME/.gvm/scripts/gvm”
 
@@ -96,7 +91,29 @@ source /Users/mauri/Library/Python/2.7/lib/python/site-packages/powerline/bindin
 # eval “$(direnv hook zsh)”
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-if [ -d “$HOME/.rvm/bin” ]; then
- export PATH=“$PATH:$HOME/.rvm/bin”
+# if [ -d “$HOME/.rvm/bin” ]; then
+#  export PATH=“$PATH:$HOME/.rvm/bin”
+# fi
+# [[ -s “$HOME/.rvm/scripts/rvm” ]] && source “$HOME/.rvm/scripts/rvm” # Load RVM into a shell session *as a function*
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [ -d "$HOME/Library/Python/2.7/bin" ]; then
+   export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 fi
-[[ -s “$HOME/.rvm/scripts/rvm” ]] && source “$HOME/.rvm/scripts/rvm” # Load RVM into a shell session *as a function*
+
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+# Go
+# export GOPATH=$HOME/go/src/main
+
+# Rbenv
+export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
