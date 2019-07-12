@@ -1,6 +1,11 @@
 # rcfiles
 Personal shell customization
 
+- Install dependencies
+- Install fonts
+- Config files
+- Just follow this instructinos https://gist.github.com/kevin-smets/8568070#file-iterm2-solarized-md
+
 ## Dependencies
 - Oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 - powerline: https://github.com/powerline/powerline
